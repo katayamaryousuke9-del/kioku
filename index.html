@@ -596,6 +596,8 @@ async function askClaude(question, relevantContents) {
 ・必ず「ユーザーの記憶」に記載された情報だけをもとに回答する
 ・記憶にない情報は「その情報は登録されていません」と答える
 ・記憶と無関係な質問には「登録された情報に関する質問にのみ回答できます」と答える
+・前置きや説明は書かず、答えだけを簡潔に返す
+・Markdown記法（**や#）は使わず、プレーンな文章で返す
 
 【ユーザーの記憶】
 ${relevantContents.length > 0 ? relevantContents.map(c => '・' + c).join('\n') : '（まだ何も登録されていません）'}
