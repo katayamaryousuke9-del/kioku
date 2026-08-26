@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>プライバシーポリシー — Kioku</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --green:#2d5a3d; --green-mint:#7ec89a; --green-pale:#f0f7f3;
+  --bg:#f8f7f4; --surface:#fff;
+  --text:#1a1a1a; --sub:#666; --border:#e0deda;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:'Noto Sans JP',sans-serif;
+  background:var(--bg);color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.9;
+}
+.header{
+  background:#fff;border-bottom:1px solid var(--border);
+  padding:0 1.2rem;height:56px;
+  display:flex;align-items:center;gap:0.8rem;
+  position:sticky;top:0;z-index:10;
+}
+.header-brand{
+  font-family:'DM Mono',monospace;font-size:1.05rem;
+  color:var(--green);font-weight:500;text-decoration:none;
+}
+.header-brand b{color:var(--green-mint);font-weight:500;}
+.header-title{font-size:0.92rem;font-weight:700;}
+main{max-width:720px;margin:0 auto;padding:2rem 1.2rem 4rem;}
+h1{font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;}
+.lead{
+  font-size:0.85rem;color:var(--sub);
+  margin-bottom:2rem;padding-bottom:1.5rem;
+  border-bottom:1px solid var(--border);
+}
+h2{
+  font-size:1rem;font-weight:700;
+  margin:2.2rem 0 0.7rem;padding-left:0.7rem;
+  border-left:3px solid var(--green);
+}
+h3{font-size:0.9rem;font-weight:700;margin:1.2rem 0 0.5rem;}
+p{font-size:0.9rem;margin-bottom:0.8rem;}
+ol,ul{margin:0 0 0.8rem 1.4rem;font-size:0.9rem;}
+li{margin-bottom:0.4rem;}
+.note{
+  background:var(--green-pale);border:1px solid #c8e6d0;
+  border-radius:12px;padding:1rem 1.2rem;margin:1.2rem 0;
+  font-size:0.85rem;
+}
+.note b{color:var(--green);}
+table{
+  width:100%;border-collapse:collapse;
+  font-size:0.84rem;margin-bottom:1rem;
+}
+th,td{
+  border:1px solid var(--border);
+  padding:0.6rem 0.7rem;text-align:left;
+  vertical-align:top;
+}
+th{background:#f4f3f0;font-weight:700;white-space:nowrap;}
+.meta{
+  margin-top:3rem;padding-top:1.5rem;
+  border-top:1px solid var(--border);
+  font-size:0.82rem;color:var(--sub);
+}
+a{color:var(--green);}
+footer{
+  text-align:center;padding:2rem 1.2rem;
+  font-size:0.75rem;color:#aaa;
+  font-family:'DM Mono',monospace;
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <a href="index.html" class="header-brand">Ki<b>oku</b></a>
+  <span class="header-title">プライバシーポリシー</span>
+</header>
+
+<main>
+  <h1>プライバシーポリシー</h1>
+  <p class="lead">
+    NovaKeel（以下「当方」）は、AIメモリサービス「Kioku」（以下「本サービス」）における個人情報の取扱いについて、以下のとおり定めます。
+  </p>
+
+  <h2>1. 取得する情報</h2>
+  <p>本サービスは、以下の情報を取得します。</p>
+  <table>
+    <tr><th>メールアドレス</th><td>アカウントの作成・認証のため</td></tr>
+    <tr><th>パスワード</th><td>認証のため。暗号化して保管され、当方が内容を閲覧することはできません</td></tr>
+    <tr><th>保存された<br>メモリ内容</th><td>利用者が本サービスに登録したテキスト情報</td></tr>
+    <tr><th>利用状況</th><td>保存件数、質問回数等の記録</td></tr>
+  </table>
+
+  <h2>2. 取得しない情報</h2>
+  <div class="note">
+    <p style="margin-bottom:0.5rem;"><b>APIキーは取得しません。</b></p>
+    <p style="margin-bottom:0;">利用者が登録したAI事業者のAPIキーは、利用者の端末内（ブラウザのローカルストレージ）にのみ保存されます。当方のサーバーには送信されず、当方がこれを取得・保管・閲覧することはありません。</p>
+  </div>
+  <p>また、本サービスはアクセス解析ツールを使用しておらず、Cookieによる行動追跡も行っていません。</p>
+
+  <h2>3. 利用目的</h2>
+  <ul>
+    <li>本サービスの提供・運営のため</li>
+    <li>利用者からのお問い合わせに回答するため</li>
+    <li>利用規約に違反する行為への対応のため</li>
+    <li>本サービスの改善のため</li>
+  </ul>
+  <p>当方は、上記の目的以外で個人情報を利用しません。<strong>利用者が保存したメモリの内容を、広告配信やAIの学習に利用することはありません。</strong></p>
+
+  <h2>4. 情報の保管場所</h2>
+  <p>本サービスのデータは、Supabase Inc.（米国）が提供するクラウドデータベースに保管されています。サーバーの所在地はシンガポールです。</p>
+  <p>したがって、利用者の情報は日本国外に移転され、保管されます。利用者は、本サービスを利用することにより、これに同意したものとみなされます。</p>
+
+  <h2>5. AIへの情報の送信について</h2>
+  <p>利用者がAIに質問を行った場合、質問文および関連するメモリの内容が、利用者自身のAPIキーを用いてAI事業者（Anthropic社）に送信されます。</p>
+  <p>この送信は利用者の端末から直接行われ、当方のサーバーを経由しません。送信された情報の取扱いについては、AI事業者のプライバシーポリシーが適用されます。</p>
+
+  <h2>6. 第三者提供</h2>
+  <p>当方は、以下の場合を除き、利用者の個人情報を第三者に提供しません。</p>
+  <ul>
+    <li>利用者の同意がある場合</li>
+    <li>法令に基づく場合</li>
+    <li>人の生命、身体または財産の保護のために必要があり、利用者の同意を得ることが困難な場合</li>
+    <li>国の機関等の法令の定める事務の遂行に協力する必要がある場合</li>
+  </ul>
+
+  <h2>7. 安全管理措置</h2>
+  <ul>
+    <li>データベースには行単位のアクセス制御（RLS）を設定しており、利用者は自身のデータのみにアクセスできます。他の利用者のデータを閲覧することはできません。</li>
+    <li>通信はすべてHTTPSにより暗号化されています。</li>
+    <li>パスワードは暗号化して保管され、当方が平文で閲覧することはできません。</li>
+  </ul>
+
+  <h2>8. 要配慮個人情報について</h2>
+  <p>本サービスは自由記述形式であるため、利用者の判断により、健康状態、病歴、信条等のいわゆる要配慮個人情報が保存される可能性があります。</p>
+  <p>これらの情報を保存するか否かは、利用者自身の判断と責任において決定してください。当方は、これらの情報を前記「3. 利用目的」以外の目的で利用しません。</p>
+
+  <h2>9. 第三者の個人情報について</h2>
+  <p>利用者が家族、友人、取引先等の第三者に関する情報を保存する場合、当該第三者の権利を侵害しないよう十分にご配慮ください。第三者の個人情報の保存については、利用者が責任を負うものとします。</p>
+
+  <h2>10. 開示・訂正・削除の請求</h2>
+  <ul>
+    <li>保存したメモリは、本サービス内のメモリ一覧画面からいつでも利用者自身が削除できます。</li>
+    <li>アカウントの削除、保有する個人情報の開示・訂正をご希望の場合は、末尾のお問い合わせ先までご連絡ください。ご本人であることを確認のうえ、遅滞なく対応します。</li>
+  </ul>
+
+  <h2>11. 本ポリシーの変更</h2>
+  <p>当方は、必要に応じて本ポリシーを変更することがあります。変更後の内容は、本サービス上に掲示した時点から効力を生じるものとします。</p>
+
+  <h2>12. お問い合わせ</h2>
+  <p>本ポリシーに関するお問い合わせは、以下までご連絡ください。</p>
+
+  <div class="meta">
+    <p style="margin-bottom:0.3rem;">制定日：2026年8月26日</p>
+    <p style="margin-bottom:0.3rem;">事業者：NovaKeel</p>
+    <p style="margin-bottom:0;">お問い合わせ：[問い合わせ先メールアドレス]</p>
+  </div>
+</main>
+
+<footer>Ki<span style="color:var(--green-mint);">oku</span> — NovaKeel</footer>
+
+</body>
+</html>
