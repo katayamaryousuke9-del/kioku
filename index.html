@@ -207,9 +207,9 @@ input,textarea{font-family:'Noto Sans JP',sans-serif;}
         </div>
         <div class="field"><label>メールアドレス</label><input type="email" id="auth-email" placeholder="you@example.com" autocomplete="email"></div>
         <div class="field"><label>パスワード</label><input type="password" id="auth-pass" placeholder="8文字以上" autocomplete="current-password"></div>
+        <div id="agree-wrap" style="display:none;margin-bottom:1.1rem;"><label style="display:flex;align-items:flex-start;gap:0.6rem;font-size:0.8rem;color:#555;line-height:1.7;cursor:pointer;"><input type="checkbox" id="agree-check" onchange="updateAuthBtn()" style="width:18px;height:18px;margin-top:0.15rem;flex-shrink:0;accent-color:#2d5a3d;"><span><a href="terms.html" style="color:var(--green);">利用規約</a>および<a href="privacy.html" style="color:var(--green);">プライバシーポリシー</a>に同意します</span></label></div>
         <div class="error-msg" id="auth-error"></div>
         <button class="submit-btn" id="auth-btn" onclick="doAuth()">ログイン</button>
-        <p style="font-size:0.72rem;color:#999;text-align:center;margin-top:1.1rem;line-height:1.8;">アカウント作成により<a href="terms.html" style="color:var(--green);">利用規約</a>および<a href="privacy.html" style="color:var(--green);">プライバシーポリシー</a>に同意したものとみなされます。</p>
       </div>
     </div>
   </div>
@@ -428,7 +428,19 @@ function setAuthMode(m) {
   document.getElementById('login-title').textContent = m === 'login' ? 'おかえりなさい' : 'はじめまして';
   document.getElementById('login-sub').textContent = m === 'login' ? 'メールアドレスとパスワードでログイン' : '無料で始められます。登録30秒';
   document.getElementById('auth-btn').textContent = m === 'login' ? 'ログイン' : 'アカウントを作成';
-  hideError();
+    hideError();
+  document.getElementById('agree-wrap').style.display = m === 'signup' ? 'block' : 'none';
+  updateAuthBtn();
+}
+
+function updateAuthBtn() {
+  const btn = document.getElementById('auth-btn');
+  if (authMode === 'signup') {
+    btn.disabled = !document.getElementById('agree-check').checked;
+  } else {
+    btn.disabled = false;
+  }
+}
 }
 
 function showError(msg) {
