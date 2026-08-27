@@ -426,7 +426,7 @@ function setAuthMode(m) {
   document.getElementById('sw-login').classList.toggle('active', m === 'login');
   document.getElementById('sw-signup').classList.toggle('active', m === 'signup');
   document.getElementById('login-title').textContent = m === 'login' ? 'おかえりなさい' : 'はじめまして';
-  document.getElementById('login-sub').textContent = m === 'login' ? 'メールアドレスとパスワードでログイン' : '無料で始められます。登録30秒';
+  document.getElementById('login-sub').textContent = m === 'login' ? 'メールアドレスとパスワードでログイン' : '無料(API費用のみ自己負担)で始められます。登録30秒';
   document.getElementById('auth-btn').textContent = m === 'login' ? 'ログイン' : 'アカウントを作成';
     hideError();
   document.getElementById('agree-wrap').style.display = m === 'signup' ? 'block' : 'none';
